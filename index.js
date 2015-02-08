@@ -28,6 +28,7 @@ invertColor.image(input);
 
 // TO DO
 // -----
+// * get jscs up and running
 // * write tests
 // * set up command line prompts for interface
 
