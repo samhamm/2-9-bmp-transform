@@ -3,18 +3,34 @@
 // Due 2-9-15
 // ---------------------------
 // Sam Hamm
-// in partnership with
+// --------
+// At the start of this assignment I was working with
 // Tricia Buckenberger & Gaye Bulut
 // ---------------------------
 
 'use strict';
 
 var fs = require('fs');
-var metadata = require('./lib/metadata.js');
-var bitmap = require('./lib/bitmap.js');
+var input = fs.readFileSync('img/toasty.bmp');
+var buffer = new Buffer(input);
 
-var input = fs.readFileSync('img/test.bmp');
-var output;
+var metadata = require('./lib/metadata.js');
+var invertColor = require('./lib/invertColor.js');
+var removeRed;
+var removeGreen;
+var removeBlue;
+var removeAllColor;
+var flipVertical;
+var flipHorizontal;
 
 metadata.listing(input);
-// bitmap.invert(input);
+invertColor.image(input);
+
+// TO DO
+// -----
+// * write tests
+// * set up command line prompts for interface
+
+// REMINDERS FOR HOW TO ACCESS THINGS
+// ----------------------------------
+// console.log(metadata.type);
