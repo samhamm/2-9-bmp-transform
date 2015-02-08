@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/sam/.node/bin/node',
+1 verbose cli   '/Users/sam/.node/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'simple_mocha' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'simple_mocha', null ]
+6 verbose cache add name=undefined spec="simple_mocha" args=["simple_mocha",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'simple_mocha',
+7 verbose parsed url   path: 'simple_mocha',
+7 verbose parsed url   href: 'simple_mocha' }
+8 silly lockFile cf58ba1b-simple-mocha simple_mocha
+9 verbose lock simple_mocha /Users/sam/.npm/cf58ba1b-simple-mocha.lock
+10 silly lockFile cf58ba1b-simple-mocha simple_mocha
+11 silly lockFile cf58ba1b-simple-mocha simple_mocha
+12 verbose addNamed [ 'simple_mocha', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 662386cc-simple-mocha simple_mocha@
+15 verbose lock simple_mocha@ /Users/sam/.npm/662386cc-simple-mocha.lock
+16 silly addNameRange { name: 'simple_mocha', range: '*', hasData: false }
+17 verbose request where is /simple_mocha
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 2dbea50ae6902c25
+20 verbose url raw /simple_mocha
+21 verbose url resolving [ 'https://registry.npmjs.org/', './simple_mocha' ]
+22 verbose url resolved https://registry.npmjs.org/simple_mocha
+23 verbose request where is https://registry.npmjs.org/simple_mocha
+24 info trying registry request attempt 1 at 19:40:38
+25 http GET https://registry.npmjs.org/simple_mocha
+26 http 404 https://registry.npmjs.org/simple_mocha
+27 verbose headers { date: 'Sun, 08 Feb 2015 03:40:39 GMT',
+27 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '52',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1423366839.206624,VS0,VE37',
+27 verbose headers   'keep-alive': 'timeout=10, max=50',
+27 verbose headers   connection: 'Keep-Alive' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { date: 'Sun, 08 Feb 2015 03:40:39 GMT',
+28 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '52',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-sjc3131-SJC',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1423366839.206624,VS0,VE37',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 silly lockFile 662386cc-simple-mocha simple_mocha@
+30 silly lockFile 662386cc-simple-mocha simple_mocha@
+31 error 404 404 Not Found: simple_mocha
+31 error 404
+31 error 404 'simple_mocha' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of '2-9-bmp-transform'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Darwin 14.1.0
+33 error command "/Users/sam/.node/bin/node" "/Users/sam/.node/bin/npm" "install" "--save-dev" "simple_mocha"
+34 error cwd /Users/sam/D30/assignments/2-9-bmp-transform
+35 error node -v v0.10.35
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]
