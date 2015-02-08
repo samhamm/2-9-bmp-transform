@@ -10,9 +10,9 @@
 'use strict';
 
 var fs = require('fs');
-var bitmap = fs.readFileSync('toasty.bmp');
-
+var bitmap = fs.readFileSync('test.bmp');
 var bitmapObject = {};
+var HEADER_SIZE = 54;
 
 bitmapObject.type = bitmap.toString('utf-8', 0, 2); // reads type
 bitmapObject.size = bitmap.readUInt32LE(2); // reads size
@@ -24,3 +24,10 @@ bitmapObject.colorDepth = bitmap.readUInt16LE(28);
 
 console.dir(bitmapObject);
 
+var buf = new Buffer(bitmap);
+
+for (var i = HEADER_SIZE; i < HEADER_SIZE + bitmapObject.paletteSize; i++) {
+  buf[i] = 255 - buf[i];
+};
+
+fs.writeFile('output.bmp', buf);
