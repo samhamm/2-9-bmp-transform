@@ -10,7 +10,6 @@
 
 'use strict';
 
-// The location and name of the file you wish to open
 var filename = 'img/test2.bmp';
 
 var fs = require('fs');
@@ -20,13 +19,14 @@ var buffer = new Buffer(input);
 var metadata = require('./lib/metadata.js'),
     invertColor = require('./lib/invertColor.js'),
     removeRed = require('./lib/removeRed.js'),
-    removeGreen = require('./lib/removeGreen.js');
+    removeGreen = require('./lib/removeGreen.js'),
+    removeBlue = require('./lib/removeBlue.js');
 
-metadata.listing(input);
-invertColor.image(input);
+// metadata.listing(input);
+// invertColor.image(input);
 // removeRed.image(input);
 // removeGreen.image(input);
-// removeBlue.image(input);
+removeBlue.image(input);
 
 // RUBRIC
 // ------
@@ -38,7 +38,6 @@ invertColor.image(input);
 
 // TO DO
 // -----
-// * get jscs up and running
 // * write tests
 // * set up command line prompts for interface
 
