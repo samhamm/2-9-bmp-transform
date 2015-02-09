@@ -22,11 +22,12 @@ var metadata = require('./lib/metadata.js'),
     removeGreen = require('./lib/removeGreen.js'),
     removeBlue = require('./lib/removeBlue.js');
 
-metadata.listing(input);
-// invertColor.image(input);
+metadata.listing(input); // this cannot be turned off or it all breaks
+
+invertColor.image(input);
 // removeRed.image(input);
 // removeGreen.image(input);
-// removeBlue.image(input);
+removeBlue.image(input);
 
 // TO DO
 // -----
