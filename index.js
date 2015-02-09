@@ -22,25 +22,17 @@ var metadata = require('./lib/metadata.js'),
     removeGreen = require('./lib/removeGreen.js'),
     removeBlue = require('./lib/removeBlue.js');
 
-// metadata.listing(input);
+metadata.listing(input);
 // invertColor.image(input);
 // removeRed.image(input);
 // removeGreen.image(input);
-removeBlue.image(input);
-
-// RUBRIC
-// ------
-// Tests: 3pts
-// Gruntfile/package.json 2pts
-// Read Bitmap Meta Data 5pts
-// Successfully Apply Transform 5pts
-// Project Design 5pts
+// removeBlue.image(input);
 
 // TO DO
 // -----
-// * write tests
 // * set up command line prompts for interface
 
 // REMINDERS FOR HOW TO ACCESS THINGS
 // ----------------------------------
-// console.log(metadata.type);
+// console.log("index.js says file type is " + metadata.type);
+// Note: this needs metadata.listing(input) to happen first
