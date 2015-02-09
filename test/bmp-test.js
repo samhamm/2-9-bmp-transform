@@ -24,7 +24,7 @@ describe('metadata', function() {
     expect(metadata.startOfPixels).to.eql(1078);
   });
 
-    it('should read image height', function() {
+  it('should read image height', function() {
     expect(metadata.height).to.eql(100);
   });
 
