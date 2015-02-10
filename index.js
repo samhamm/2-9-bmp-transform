@@ -16,24 +16,33 @@ var fs = require('fs');
 var input = fs.readFileSync(filename);
 var buffer = new Buffer(input);
 
+var bufferInv = new Buffer([]);
+
+// buffer.copy(bufferInv);
+var bufferRed = new Buffer([]);
+// buffer.copy(bufferRed);
+var bufferGreen = new Buffer([]);
+// buffer.copy(bufferGreen);
+var bufferBlue = new Buffer([]);
+// buffer.copy(bufferBlue);
+
+for (var i = 0; i < buffer.length; i++) {
+  bufferInv[i] = buffer[i];
+  bufferRed[i] = buffer[i];
+  bufferGreen[i] = buffer[i];
+  bufferBlue[i] = buffer[i];
+};
+
 var metadata = require('./lib/metadata.js'),
     invertColor = require('./lib/invertColor.js'),
     removeRed = require('./lib/removeRed.js'),
     removeGreen = require('./lib/removeGreen.js'),
     removeBlue = require('./lib/removeBlue.js');
 
-metadata.listing(input); // this cannot be turned off or it all breaks
+metadata.listing(input);
 
-invertColor.image(input);
+// To do a particular transformation, un-comment the desired function
+// invertColor.image(input);
 // removeRed.image(input);
 // removeGreen.image(input);
-removeBlue.image(input);
-
-// TO DO
-// -----
-// * set up command line prompts for interface
-
-// REMINDERS FOR HOW TO ACCESS THINGS
-// ----------------------------------
-// console.log("index.js says file type is " + metadata.type);
-// Note: this needs metadata.listing(input) to happen first
+// removeBlue.image(input);
