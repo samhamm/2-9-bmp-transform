@@ -6,9 +6,7 @@ var metadata = require('../lib/metadata.js');
 var filename = 'img/test2.bmp';
 var fs = require('fs');
 var input = fs.readFileSync(filename);
-
 metadata.listing(input);
-console.log(metadata.type);
 
 describe('metadata', function() {
 

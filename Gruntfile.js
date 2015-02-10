@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-jscs');
 
   grunt.initConfig({
     jshint: {
@@ -25,8 +26,10 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     }
+
   });
 
   grunt.registerTask('test', ['jshint:dev', 'simplemocha:all']);
   grunt.registerTask('default', ['test']);
+  grunt.registerTask("jscs", ['jscs']);
 };
